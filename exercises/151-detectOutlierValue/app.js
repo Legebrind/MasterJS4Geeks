@@ -1,5 +1,16 @@
 function detectOutlierValue(string) {
     // your code here
+    var aux = string.split(" ");
+    var suma = 0;
+    for (const key in aux){
+      aux[key] = parseInt(aux[key])%2;
+      suma += aux[key];
+    }
+    if (suma == 1){
+      return aux.indexOf(1)+1;
+    }
+    return aux.indexOf(0)+1;;
+    
 }
 
 // Third number is odd, while the rest of the numbers are even

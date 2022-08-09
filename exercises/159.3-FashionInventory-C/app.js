@@ -18,5 +18,15 @@ let inventory = [
   ];
 
 function renderInventory(shoeList) {
-  
+  aux=[];
+  for(var i = 0; i < shoeList.length;i++){
+      for(var j = 0; j < shoeList[i].shoes.length; j++){
+        if(shoeList[i].shoes[j].name.includes("black")){
+          aux.push([shoeList[i].name,shoeList[i].shoes[j].name,shoeList[i].shoes[j].price]);
+        }  
+        
+
+      }
+  }
+  return aux;
 }

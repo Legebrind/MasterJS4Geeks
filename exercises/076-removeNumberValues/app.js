@@ -5,6 +5,11 @@ var obj = {
 };
 function removeNumberValues(obj) {
     // your code here
+    for (const [key,value] of Object.entries(obj)){
+        if(Number.isInteger(value)){
+            delete obj[key];
+        }
+    }
 }
 
 removeNumberValues(obj);
